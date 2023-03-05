@@ -1,6 +1,6 @@
 let callApi = new CallApi();
 getDataList();
-let cart = [];
+let cart = [0];
 loadCart()
 /**
  * function get data from Api
