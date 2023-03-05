@@ -1,6 +1,6 @@
 let callApi = new CallApi();
 getDataList();
-let cart = new Array();
+let cart = [];
 loadCart()
 /**
  * function get data from Api
@@ -279,6 +279,7 @@ function saveCart() {
   localStorage.setItem("shoppingCart", JSON.stringify(cart));
 }
 function loadCart() {
-  cart = JSON.parse(localStorage.getItem("shoppingCart"));
+  let data =localStorage.getItem("shoppingCart");
+  cart = JSON.parse(data) || []
   renderCart(cart);
 }
