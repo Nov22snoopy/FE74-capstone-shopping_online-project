@@ -198,9 +198,7 @@ function checkout() {
  * render table cart
  * @param {*} data
  */
-function renderCart(data) {
-  let cart = [];
-  cart = data;
+function renderCart(cart) {
   console.log(cart.length);
   let contentHTML = "";
   if (cart.length == 0) {
