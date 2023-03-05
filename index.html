@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cyber Phone</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <h1>CyberPhone</h1>
+        </a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#brand">Brand</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./admin-page/app/view/index.html">Administration Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#brand">
+                <button class="btn btn-light">Buy Now</button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link text-dark" data-toggle="modal" data-target="#cart">
+                Cart
+              </button>
+              <span class="cart-btn" id="cartDisplay"></span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section id="carousel">
+      <div id="demo" class="carousel slide">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-text">
+              <h1>
+                All New Phones <br />
+                up to 25% Flat Sale
+              </h1>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content <br />
+                of a page when looking at its layout. The point of using Lorem
+                Ipsum is that
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-text">
+              <h1>
+                All New Phones <br />
+                up to 25% Flat Sale
+              </h1>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content <br />
+                of a page when looking at its layout. The point of using Lorem
+                Ipsum is that
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-5 col-12 about-left">
+            <img src="./images/about.png" alt="about" class="img-fluid" />
+          </div>
+          <div class="col-xl-7 col-12 about-right">
+            <div class="about-text text-right">
+              <span class="text-secondary display-4">About Us</span>
+              <h1 class="text-dark display-3 font-weight-bold">
+                Our Mobile Shop
+              </h1>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of It is a long established fact that a reader will be
+                distracted by the readable content of a page when looking at its
+                layout. The point of It is a long established fact that a reader
+                will be distracted by the
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="brand">
+      <div class="container">
+        <div class="brand-header">
+          <h1 class="display-4 font-weight-bold">Our Brand</h1>
+        </div>
+        <div class="brand-content">
+          <div class="product-list row">
+            <div class="loading">
+              <img src="./images/loading.gif" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <div class="p-4 bg-dark text-white text-center">
+          <p>Copyright © Your Website 2022</p>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      id="open-detail"
+      data-toggle="modal"
+      data-target="#product-detail"
+      style="display: none"
+    ></button>
+    <!-- Modal -->
+    <div class="modal" id="product-detail">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Product Detail</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body container"></div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="cart">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Product Detail</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body container">
+            <table class="table-striped w-100">
+              <thead class="text-center">
+                <th class="  ">Image</th>
+                <th class="">Name</th>
+                <th class="">Price</th>
+                <th class="">Count</th>
+              </thead>
+              <tbody id="renderCart" class="text-center">
+                <tr>
+                  <td colspan="4">
+                    <p style="font-size: 18px">"Your cart is empty"</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer align-items-center" id="cart-footer">
+            <span >
+              <button class="btn btn-success" onclick="checkout()">
+                Purchase
+              </button>
+            </span>
+            <h3>Total: $0</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.3/axios.min.js"
+      integrity="sha512-wS6VWtjvRcylhyoArkahZUkzZFeKB7ch/MHukprGSh1XIidNvHG1rxPhyFnL73M0FC1YXPIXLRDAoOyRJNni/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- service -->
+    <script src="./app/service/callApi.js"></script>
+    <!-- models -->
+    <script src="./app/models/product.js"></script>
+    <!-- main JS -->
+    <script src="./app/controller/main.js"></script>
+  </body>
+</html>
